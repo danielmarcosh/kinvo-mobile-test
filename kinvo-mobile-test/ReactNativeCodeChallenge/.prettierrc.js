@@ -3,4 +3,8 @@ module.exports = {
   jsxBracketSameLine: true,
   singleQuote: true,
   trailingComma: 'all',
+},
+{
+	"singleQuote":  true,
+	"trailingComma":  "es6"
 };
