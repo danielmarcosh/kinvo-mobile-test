@@ -41,6 +41,18 @@ function Home({navigation}) {
           </View>
         </View>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Previdencia')}>
+        <View style={styles.item}>
+          <Image
+            style={styles.Image}
+            source={require('./../../assets/previdencia.png')}
+          />
+          <View style={styles.titleAndDescription}>
+            <Text style={styles.title}>Previdências</Text>
+            <Text style={styles.description}>Privadas</Text>
+          </View>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }
