@@ -5,6 +5,7 @@ import {
   StyleSheet,
   StatusBar,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 
 function Home({navigation}) {
@@ -12,8 +13,32 @@ function Home({navigation}) {
     <View style={styles.container}>
       <TouchableOpacity onPress={() => navigation.navigate('Acoes')}>
         <View style={styles.item}>
-          <Text style={styles.title}>Ações</Text>
-          <Text style={styles.description}>Status</Text>
+          <Image
+            style={styles.Image}
+            source={require('./../../assets/acoes.png')}
+          />
+          <View style={styles.titleAndDescription}>
+            <Text style={styles.title}>Ações</Text>
+            <Text style={styles.description}>Nacionais</Text>
+          </View>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Fundos')}>
+        <View style={styles.item}>
+          <Image
+            style={styles.Image}
+            source={require('./../../assets/fundos.png')}
+          />
+          <View style={styles.titleAndDescription}>
+            <Text style={styles.title}>Fundos</Text>
+            <Text style={styles.description}>De investimentos</Text>
+          </View>
+          <View style={{paddingLeft: 100, paddingTop: 15}}>
+            <Image
+              style={styles.Image}
+              source={require('./../../assets/novo.png')}
+            />
+          </View>
         </View>
       </TouchableOpacity>
     </View>
@@ -38,6 +63,7 @@ const styles = StyleSheet.create({
     borderColor: '#707070',
     borderWidth: 0.5,
     borderRadius: 10,
+    flexDirection: 'row',
   },
   title: {
     fontSize: 18,
@@ -47,6 +73,14 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 12,
     color: '#627179',
+  },
+  image: {
+    height: 56,
+    width: 56,
+  },
+  titleAndDescription: {
+    paddingLeft: 12,
+    paddingTop: 8,
   },
 });
 
